@@ -1,0 +1,17 @@
+# ssh-inhibit-sleep.service
+# Runs ssh-inhibit-sleep.sh to block sleep during SSH connections.
+#
+# Author:  Zack Elramly <github@zelram.com>
+# Repo:    https://github.com/ZackElramly/ssh-inhibit-sleep
+# SPDX-License-Identifier: MIT
+
+[Unit]
+Description=Inhibit sleep while SSH connections are active
+After=network.target sshd.service
+
+[Service]
+ExecStart=/usr/local/bin/ssh-inhibit-sleep.sh
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

@@ -1,4 +1,5 @@
 # ssh-inhibit-sleep
+<<<<<<< HEAD
 
 A small systemd service that keeps a Linux machine from sleeping while any SSH connection is active.
 
@@ -79,3 +80,6 @@ Every `CHECK_INTERVAL` seconds, the script uses `ss` to look for established TCP
 ## License
 
 MIT. See [LICENSE](LICENSE).
+=======
+A small systemd service that keeps a Linux machine from sleeping while any SSH connection is active.
+>>>>>>> origin/main
